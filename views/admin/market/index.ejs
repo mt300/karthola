@@ -1,0 +1,26 @@
+<%- include("../../partials/header.ejs")  %> 
+<body>
+    <%- include("../../partials/navbar.ejs")  %>
+    <div class="container">
+        <hr>
+        <h2 class="text-center">Market Menager</h2>
+        <br>
+        <a href="/admin/player/new" class="btn btn-dark ">New Player</a>
+        <a href="/admin/orgs/new" class="btn btn-dark ">New Org</a>
+        <hr>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Lane</th>
+                    <th>Org.</th>
+                    <th>Preço</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+        </table>
+
+    </div>
+</body>
+<%- include("../../partials/footer.ejs")  %>

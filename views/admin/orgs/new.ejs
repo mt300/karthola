@@ -1,0 +1,25 @@
+<%- include("../../partials/header.ejs")  %>
+<body>
+    <%- include("../../partials/navbar.ejs")  %> 
+    <div class="container">
+        <br>
+        <div class="card">
+            <div class="card-header">
+                <h2>Nova Organização</h2>
+            </div>
+            <div class="card-body">
+
+                <form method="POST" action="/orgs/save">
+                    <label for="name">Nome</label>
+                    <input type="text" name="name" placeholder="Nome da organização..." class="form-control">
+                    <br>
+                    <button class="btn btn-dark">Salvar</button>
+                </form>
+            </div>
+
+        </div> 
+    </div>
+
+</body> 
+
+<%- include("../../partials/footer.ejs")  %> 

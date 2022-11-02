@@ -1,0 +1,43 @@
+<%- include("../../partials/header.ejs")  %>
+<body>
+    <%- include("../../partials/navbar.ejs")  %> 
+    <div class="container">
+        <br>
+        <div class="card">
+            <div class="card-header">
+                <h2>Novo Player</h2>
+            </div>
+            <div class="card-body">
+
+                <form method="POST" action="/player/save">
+                    <label for="name">Nome</label>
+                    <input type="text" name="name" placeholder="Nome do jogador..." class="form-control">
+                    
+                    <label for="org">Organização</label>
+                    <select name="org" class="form-control">
+                        <% orgs.forEach(element => { %>
+                            <option value="<%= element.id%>"> <%= element.name %></option>
+                        <% }) %>
+                    </select>
+                    <label for="lane">Lane</label>
+                    <select name="lane"class="form-control" >
+                        <option value="top">Top Laner</option>
+                        <option value="jungler">Jungler</option>
+                        <option value="mid">Mid Laner</option>
+                        <option value="adc">Atirador</option>
+                        <option value="sup">Suporte</option>
+                    </select>
+                    <br>
+                    <label for="available">Disponivel no Mercado:</label>
+                    <input type="checkbox" name="available">
+                    <br><br>
+                    <button class="btn btn-dark">Salvar</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+</body> 
+
+<%- include("../../partials/footer.ejs")  %> 
