@@ -12,7 +12,8 @@
                 <form method="POST" action="/player/save">
                     <label for="name">Nome</label>
                     <input type="text" name="name" placeholder="Nome do jogador..." class="form-control">
-                    
+                    <label for="pic" >URL da imagem</label>
+                    <input type="text" class="form-control" name="pic" placeholder="cole aqui a URL da imagem do jogador...">
                     <label for="org">Organização</label>
                     <select name="org" class="form-control">
                         <% orgs.forEach(element => { %>

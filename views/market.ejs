@@ -2,34 +2,21 @@
 <%- include("partials/navbar.ejs") %>
 <body>
     <h1>Mercado de Players</h1>    
-    <div class="container">
-        <table class="table">
-            <thead>
-
-                <tr>
-                    <th>Nome</th>
-                    <th>Lane</th>
-                    <th>Org.</th>
-                    <th>Preço</th>
-                    <th>Comp./Vend.</th>
-                </tr>
-            </thead>
-            <tbody>
+    <div class="container inline">
                 <% players.forEach(element => { %> 
-                    <tr>
-                        <th><%= element.name %> </th>
-                        <th><%= element.lane %></th>
-                        <th><%= element.org.name %></th>
-                        <th><%= element.price %></th>
-                        <th>
-                            <a href="/" class="btn btn-success">Comprar</a>
-                            <a href="/" class="btn btn-danger">Vender</a>
-                        </th>
-                        
-                    </tr>
+
+                    <div class="card " style="width: 18em;">
+                        <img class="card-img-top" src="<%= element.pic %>" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= element.name %></h5>
+                            <p class="card-text"><%= element.lane %></p>
+                            <p class="card-text"><%= element.org.name %></p>
+                            <a class="btn btn-success" href="#">Comprar</a>
+                            <a href="#" class="btn btn-danger">Vender</a>
+                        </div>
+                    </div>
                 <% }) %>
-            </tbody>
-        </table>
+            
     </div>
 </body>
 <%- include("partials/footer.ejs") %>

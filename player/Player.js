@@ -22,12 +22,16 @@ const Player = connection.define('players',{
     slug:{
         type: Sequelize.STRING,
         allowNull:false
+    },
+    pic:{
+        type: Sequelize.STRING,
+        allowNull: false
     }
 });
 
 Org.hasMany(Player);
 Player.belongsTo(Org);
 
-// Player.sync({force:true});
+Player.sync({force:true});
 
 module.exports = Player;

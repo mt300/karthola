@@ -16,6 +16,7 @@ router.post('/player/save', (req,res) => {
     var lane = req.body.lane;
     var org = req.body.org;
     var available = req.body.available?true:false;
+    var pic = req.body.pic;
     if(name != undefined){
         Player.create({
             name:name,
@@ -23,7 +24,8 @@ router.post('/player/save', (req,res) => {
             available:available,
             price: 0.0,
             slug:slugify(name),
-            orgId: org
+            orgId: org,
+            pic:pic
         }).then(() => {
             res.redirect("/admin/player/new");
         }).catch((error) => {
